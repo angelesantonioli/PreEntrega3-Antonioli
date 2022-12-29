@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Intra Abyssus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Redacted+Script&family=Rubik+Glitch&family=VT323&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="#">
+</head>
+
+<body class="body">
+    <div class="bienvenida" id="welcome">
+        <h2>I n t r A  A b y s u s S</h2>
+        <p>Bienvenido/a a IntrAAbyssuS, viajero/a. Esta es una aventura de acertijos y preguntas. Así que ¡Hora de pelear!</p>
+        <p>Por favor ingrese el nombre con el que desea ser llamado durante el juego. Tiene hasta 12 caracteres.</p>
+        <form id="login">
+            <label>
+                <input type="text" placeholder="Nombre" id="name" class="textbox">
+            </label>
+            <label>
+                <input type="submit" value="Ingresar" id="boton" class="boton">
+            </label>
+            <p id="nament">El nombre de usuario superior o inferior en caracteres a lo requerido.</p>
+            <div id="validado">
+                <p id="correct">Nombre ingresado correctamente.</p>
+                <label>
+                    <input type="button" value="¡Empezar aventura!" id="botonEmpezar" class="boton">
+                </label>
+            </div>
+            <img src="img/mascot.png" alt="rabbit mascot" class="mascot">
+        </form>
+    </div>
+    <div class="fondo">
+        <img src="img/index.jpg" alt="fondo index" >
+    </div>
+    <div class="portada">
+    <h1>I n t r A  A b y s u s S</h1>
+    </div>
+    <div class="music-icon">
+        <img src="img/play.png" alt="music icon" width="100" id="musicIcon">
+    </div>
+    <audio loop id="intro">
+        <source src="music/Intro.mp3" type="audio/mp3">
+    </audio>
+    <div class="cero-chapter" id="cero">
+        <a href="pages/virià-sati.html"><img src="img/monster card1.jpg" alt="monstruo1" id="satiIcon" ></a>
+        <h2 class="glitch"> <span aria-hidden="true">Virià Sati</span>V̸͈͈͓̊̀i̵̲̟̬̣͛̃͘r̶̤̲̓̓̈̇̃i̴̺̺̱̇ą̴̣͈̻̀̌ ̸̢̹̒̈́S̴̫̟͚̰̿͒̎̏a̷̦̝̣͒̏̚t̸̜̦̆̎ͅi̴̡̬̤̥̋̄͐<span aria-hidden="true">Virià Sati</span> </h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
