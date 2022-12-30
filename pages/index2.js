@@ -22,6 +22,7 @@ const dialogueUnoB = document.querySelector("#uno-chapterB")
 const dialogueUnoC = document.querySelector("#uno-chapterC")
 const dialogueUnoD = document.querySelector("#uno-chapterD")
 const dialogueUnoE = document.querySelector("#uno-chapterE")
+const dialogueUnoF = document.querySelector("#uno-chapterF")
 const submitAnswer = document.querySelector("#riddle")
 const answerTexbox = document.querySelector("#answers")
 const questionText = document.querySelector("#question")
@@ -30,7 +31,7 @@ const submitClicker = document.querySelector("#submit-clicker")
 
 
 let numbers = [220, 14, 34, 746473, 27, 393, 211, 9, 36, 72]
-let dialogosSelectors = ["#uno-chapterA", "#uno-chapterB", "#uno-chapterC", "#uno-chapterD", "#uno-chapterE"].map(x => document.querySelector(x))
+let dialogosSelectors = ["#uno-chapterA", "#uno-chapterB", "#uno-chapterC", "#uno-chapterD", "#uno-chapterE", "#uno-chapterF"].map(x => document.querySelector(x))
 
 iconMusic.onclick = () => {
     if (intro.paused) {
@@ -59,8 +60,6 @@ dialogueClicker.onclick = (event) => {
         dialogosSelectors[currentDialogue - 1].style.display = "none"
     }
     dialogosSelectors[currentDialogue].style.display = "flex"
-    console.log(dialogosSelectors[currentDialogue])
-    console.log(currentDialogue)
     if (currentDialogue === dialogosSelectors.length-1) {
         dialogosSelectors[currentDialogue].style.display = "none"
         dialogosSelectors[3].style.display = "flex"
