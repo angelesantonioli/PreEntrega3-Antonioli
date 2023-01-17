@@ -12,6 +12,13 @@ const nameInput = document.querySelector("#name")
 const button = document.querySelector("#boton")
 const buttonStart = document.querySelector("#botonEmpezar")
 
+swal ({
+    title: "¡Bienvenido/a a IntrAAbyssuS, viajero/a!",
+    text: "Esta es una aventura de acertijos y preguntas. Así que ¡Hora de pelear!",
+    icon: "/img/dialogue open2.png",
+    buttons: "¡Empecemos!"
+})
+
 function validateUserName(userName) {
     userName = userName.trim()
     if (userName && userName.length <= 12 ) {

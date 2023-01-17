@@ -366,3 +366,29 @@ h2 {
     border-radius: 10px;
     border: none;
 }
+
+.swal-text {
+    color: white;
+    font-family: 'VT323', monospace;
+}
+
+.swal-title {
+    color: white;
+    font-family: 'VT323', monospace;
+}
+.swal-modal {
+    background-color: black;
+    border: 3px solid white;
+}
+.swal-overlay {
+    background-color: rgba(220, 56, 119, 0.193);
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #000000;
+    font-size: 12px;
+    border: 1px solid #ffffff;
+    align-items: center;
+}

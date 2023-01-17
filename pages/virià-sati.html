@@ -16,7 +16,7 @@
 <link rel="shortcut icon" href="#">
 </head>
 
-<body class="body">
+<body class="body" onload="loadRiddles()">
     <div class="portada">
     <h1>I n t r A  A b y s u s S</h1>
     </div>
@@ -26,7 +26,7 @@
     <audio loop id="intro">
         <source src="/music/Sati.mp3" type="audio/mp3">
     </audio>
-    <div class="uno-chapter">
+    <div class="uno-chapter" id="chapter-one">
         <div class="maquina-efect">
             <p id="uno-chapterA">Lentamente vas despertando. Abrís los ojos a una enorme oscuridad. Intentas recordar y solamente sientes pesadez pero no recuerdas nada. <span class="span1">&#160</span></p>
             <p id="uno-chapterB" class="trigger">¿Quién soy?  .<span class="span2">&#160</span></p>
@@ -55,7 +55,9 @@
             <img id="submit-clicker" class ="mushroom" src="/img/dialogue open.png" alt="submit mushroom clicker" onclick="answer()" onmouseover="blinkIn(this)" onmouseout="blinkOut(this)">
         </div>
     </div>
+    <p id="error-message" style="display: none;"> No se pudo cargar el juego. Intenta refrescar la página, por favor.</p>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="acertijos.js"></script>
     <script src="index2.js"></script>
 </body>
