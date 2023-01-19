@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Intra Abyssus</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Redacted+Script&family=Rubik+Glitch&family=VT323&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="#">
+</head>
+
+<body class="body" onload="loadRiddles()">
+    <div class="portada">
+    <h1>I n t r A  A b y s u s S</h1>
+    </div>
+    <div class="music-icon">
+        <img src="/img/play.png" alt="music icon" width="100" id="musicIcon">
+    </div>
+    <audio loop id="intro">
+        <source src="/music/Sati.mp3" type="audio/mp3">
+    </audio>
+    <div class="uno-chapter" id="chapter-one">
+        <div class="maquina-efect">
+            <p id="uno-chapterA">Lentamente vas despertando. Abrís los ojos a una enorme oscuridad. Intentas recordar y solamente sientes pesadez pero no recuerdas nada. <span class="span1">&#160</span></p>
+            <p id="uno-chapterB" class="trigger">¿Quién soy?  .<span class="span2">&#160</span></p>
+            <p id="uno-chapterC">"Oh" - dijo una voz burlona a tus espaldas - "Otro humano perdido"  .<span class="span3">&#160</span></p>
+        </div>
+        <img id="uno-chapterD" class="flotar" src="/img/monstruo 1 png.png" alt="1er monstruo">
+        <div id="uno-chapterE" class="maquina-efect">
+            <p>Al girarte ves flotando a una especie de gato. "Me recordaba mucho a un gato que tuve.... Alu. Sí, ese era su nombre. Espera, ¡Estoy recordando!"</p>
+            <p>El gato te mira flotando a tu alrededor como si fuera algo divertido de ver.</p>
+            <p>"Mi nombre es .<span class="span4">&#160</span></p>
+            <h2 class="glitch"> <span aria-hidden="true">Virià Sati</span>V̸͈͈͓̊̀i̵̲̟̬̣͛̃͘r̶̤̲̓̓̈̇̃i̴̺̺̱̇ą̴̣͈̻̀̌ ̸̢̹̒̈́S̴̫̟͚̰̿͒̎̏a̷̦̝̣͒̏̚t̸̜̦̆̎ͅi̴̡̬̤̥̋̄͐<span aria-hidden="true">Virià Sati</span> </h2>
+            <p>Pero puedes llamarme Sati" .<span class="span5">&#160</span></p>
+            <p>Se acerca y te huele antes de alejarse</p>
+            <p>"Bien, humano. Te ayudaré a recordar. Veo que ansías mucho volver aunque acabas de llegar. Pero para eso debes responder correctamente todas mis preguntas. ¡Sino voy a comerte! Y creéme cuando te digo que tengo hambre"</p>
+        </div>
+        <div id="uno-chapterF"></div>
+        <div class="container-clicker" id="container-clicker">
+            <img id="dialogue-clicker" class ="mushroom" src="/img/dialogue open.png" alt="dialogue mushroom clicker" onmouseover="blinkIn(this)" onmouseout="blinkOut(this)">
+        </div>
+        <div class="preguntas" id="riddle" style="display: none;">
+            <p id="question"></p>
+            <label>
+                <input type="text" id="answers" placeholder="Ingrese su respuesta" class="textbox">
+            </label>
+            <p id="status"></p>
+            <img id="submit-clicker" class ="mushroom" src="/img/dialogue open.png" alt="submit mushroom clicker" onclick="answer()" onmouseover="blinkIn(this)" onmouseout="blinkOut(this)">
+        </div>
+    </div>
+    <p id="error-message" style="display: none;"> No se pudo cargar el juego. Intenta refrescar la página, por favor.</p>
+
+    <script src="/helper.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index2.js"></script>
+</body>
+
+</html>

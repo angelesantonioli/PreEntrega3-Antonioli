@@ -69,7 +69,7 @@ p {
     width: 0;
     background: black;
     border-left: 1px solid grey;
-    animation: maquina 15s infinite alternate steps(25);
+    animation: maquina 2s infinite alternate steps(25);
 }
 
 .span3 {
@@ -78,7 +78,7 @@ p {
     width: 0;
     background: black;
     border-left: 1px solid grey;
-    animation: maquina 15s infinite alternate steps(78);
+    animation: maquina 8s infinite alternate steps(78);
 }
 
 .span4 {
