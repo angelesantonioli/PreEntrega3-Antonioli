@@ -507,3 +507,22 @@ h5 {
 .portada a {
     text-decoration: none;
 }
+
+#final-dialogue-clicker {
+    animation: float 6s ease-in-out infinite;
+    transform: translatey(0px);
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-50px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}

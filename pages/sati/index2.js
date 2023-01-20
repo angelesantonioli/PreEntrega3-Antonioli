@@ -18,6 +18,7 @@ let vidaRestanteHeroe1 = traveler.heroeVidaa
 let currentDialogue = 0
 let currentFinalDialogue = 0
 let currentQuestion = 0
+let user = sessionData.userName
 const dialogueClicker = document.querySelector("#dialogue-clicker")
 const finalDialogueClicker = document.querySelector("#final-dialogue-clicker")
 const restart = document.querySelector("#restart")
@@ -29,10 +30,10 @@ const submitClicker = document.querySelector("#submit-clicker")
 const errorMessage = document.querySelector("#error-message")
 const chapterOne = document.querySelector("#chapter-one")
 const sati = document.querySelector("#uno-chapterD")
-const body = document.querySelector("#body")
+const audio = document.querySelector("#intro")
 
 let dialogosSelectors = ["#uno-chapterA", "#uno-chapterB", "#uno-chapterC", "#uno-chapterD", "#uno-chapterE", "#uno-chapterF"].map(x => document.querySelector(x))
-let finalDialogues = ["assd", "asd"]
+let finalDialogues = ["...", "¿Sábes? Estuve esperando mucho tiempo para vernos de nuevo", "Yo siempre esperé en tu interior, viajero. Siempre esperando a que vuelvas a creer en mí, en tu imainación, en tus nuevos caminos...", "Está bien, no te sientas mal. El que hayas vuelto por tus recuerdos por más que la vida te haya golpeado es valiente. No pierdas esa luz en tu interior nunca más. Los sueños comienzan cuando se crees en ellos y las heridas se curaran mientras sigamos con vida.", "Pero no has terminado aún y lo sábes. Así que yo te guiaré más adentro de ti para que sigas recuperando tus recuerdos de nosotros. Sigue mis flores y llegaras a Viri", "¡Pero ten cuidado! Es astuta como un zorro y filosa como una katana. No te confíes, viajero.", " "]
 
 const statusSati = (nameM) => {
     if (vidaRestanteHeroe1 === 0) {
@@ -43,10 +44,10 @@ const statusSati = (nameM) => {
         restart.style.display = "flex"
         return "/img/monstruo end.png"
     } if (vidaRestanteMonstruo1 === 0) {
-        body.style.background = "rgb(58 58 58);"
         sessionData.isSatiDefeated = true
         loadLs("session", sessionData)
         statusText.innerText = `${nameM} ha caído derrotado. ¡El viajero es el ganador!`
+        audio.src = "/music/finale.mp3"
         questionText.style.display = "none"
         answerTexbox.style.display = "none"
         submitClicker.style.display = "none"
