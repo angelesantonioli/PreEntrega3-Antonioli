@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG - Intra Abyssus</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redacted+Script&family=Rubik+Glitch&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body class="body" onload="loadComments()">
+    <div class="portada">
+        <a href="/"><h1>I n t r A A b y s u s S</h1></a>
+    </div>
+    <div class="music-icon">
+        <img src="/img/play.png" alt="music icon" width="100" id="musicIcon">
+    </div>
+    <audio loop id="intro">
+        <source src="/music/Viri.mp3" type="audio/mp3">
+    </audio>
+    <div class="container-intro-viri">
+        <img src="/img/monstruo2 png.png" alt="Viri icono" class="viri-icon">
+        <h2>Próximamente</h2>
+        <p>¿Te gustó hasta acá la Demo del juego? Si deseas pueden dejarnos un comentario en nuestra sección de Comunidad</p>
+        <div class="titulo-comunidad">
+            <img src="/img/dialogue open2.png" alt="hongo">
+            <h1>Comunidad</h1>
+            <img src="/img/dialogue open2.png" alt="hongo">
+        </div>
+
+    </div>
+    <div id="comment-container">
+        <img class="mascot-icon" src="/img/mascot.png" alt="mascot">
+    </div>
+    <div class="form">
+        <h3 class="div2-contacto-tittle">Complete el Formulario</h3>
+        <p id="user-name"></p>
+        <h5>Escriba su opinión o comentario</h5>
+        <textarea class="opinion" name="mensaje" id="opinion" placeholder="Escriba aquí su mensaje"></textarea>
+        <br>
+        <button type="button" class="boton" id="boton" onclick="postComment()">Enviar</button>
+    </div>
+    <script src="/helper.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="viri.js"></script>
+</body>

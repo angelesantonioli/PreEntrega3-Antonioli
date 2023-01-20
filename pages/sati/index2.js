@@ -16,13 +16,11 @@ let acertijos = []
 let vidaRestanteMonstruo1 = monstruo1.monstruo1Vida
 let vidaRestanteHeroe1 = traveler.heroeVidaa
 let currentDialogue = 0
+let currentFinalDialogue = 0
 let currentQuestion = 0
-let currentRight = 0
-let currentWrong = 0
-let currentScore = 5
-const iconMusic = document.querySelector("#musicIcon")
 const dialogueClicker = document.querySelector("#dialogue-clicker")
-const containerClicker = document.querySelector("#container-clicker")
+const finalDialogueClicker = document.querySelector("#final-dialogue-clicker")
+const restart = document.querySelector("#restart")
 const submitAnswer = document.querySelector("#riddle")
 const answerTexbox = document.querySelector("#answers")
 const questionText = document.querySelector("#question")
@@ -31,9 +29,10 @@ const submitClicker = document.querySelector("#submit-clicker")
 const errorMessage = document.querySelector("#error-message")
 const chapterOne = document.querySelector("#chapter-one")
 const sati = document.querySelector("#uno-chapterD")
+const body = document.querySelector("#body")
 
 let dialogosSelectors = ["#uno-chapterA", "#uno-chapterB", "#uno-chapterC", "#uno-chapterD", "#uno-chapterE", "#uno-chapterF"].map(x => document.querySelector(x))
-
+let finalDialogues = ["assd", "asd"]
 
 const statusSati = (nameM) => {
     if (vidaRestanteHeroe1 === 0) {
@@ -41,37 +40,40 @@ const statusSati = (nameM) => {
         questionText.style.display = "none"
         answerTexbox.style.display = "none"
         submitClicker.style.display = "none"
+        restart.style.display = "flex"
         return "/img/monstruo end.png"
     } if (vidaRestanteMonstruo1 === 0) {
+        body.style.background = "rgb(58 58 58);"
         sessionData.isSatiDefeated = true
-        loadLs("session",sessionData)
+        loadLs("session", sessionData)
         statusText.innerText = `${nameM} ha caído derrotado. ¡El viajero es el ganador!`
         questionText.style.display = "none"
         answerTexbox.style.display = "none"
         submitClicker.style.display = "none"
+        finalDialogueClicker.style.display = "flex"
         return "/img/monstruo1saved.png"
-    } 
-    let porcentajeVidaMonstruo = vidaRestanteMonstruo1 / monstruo1.monstruo1Vida 
+    }
+    let porcentajeVidaMonstruo = vidaRestanteMonstruo1 / monstruo1.monstruo1Vida
     let porcentajeVidaHeroe = vidaRestanteHeroe1 / traveler.heroeVidaa
     let difVidas = porcentajeVidaHeroe / porcentajeVidaMonstruo
     if (difVidas == 1) {
         return "/img/monstruo 1 png.png"
-    } 
+    }
     if (difVidas > 2) {
         return "/img/monstruo 3r.png"
-    } 
+    }
     if (difVidas > 1.5) {
         return "/img/monstruo 2r.png"
-    } 
+    }
     if (difVidas > 1) {
         return "/img/monstruo 1r.png"
-    } 
+    }
     if (difVidas < 0.5) {
         return "/img/monstruo 2w.png"
-    } 
+    }
     if (difVidas < 1) {
         return "/img/monstruo 1w.png"
-    } 
+    }
 }
 
 const loadRiddles = async () => {
@@ -84,22 +86,20 @@ const loadRiddles = async () => {
     acertijos = await response.json()
 }
 
-iconMusic.onclick = () => {
-    if (intro.paused) {
-        intro.play()
-        iconMusic.src = "/img/pause.png"
-    } else {
-        intro.pause()
-        iconMusic.src = "/img/play.png"
-    }
-}
-
 const blinkIn = (target) => {
     target.src = "/img/dialogue close.png"
 }
 
 const blinkOut = (target) => {
     target.src = "/img/dialogue open.png"
+}
+
+const advanceFinalDialogue = () => {
+    statusText.innerHTML = finalDialogues[currentFinalDialogue]
+    currentFinalDialogue++
+    if(currentFinalDialogue === finalDialogues.length){
+        location.assign("/")
+    }
 }
 
 dialogueClicker.onclick = (event) => {
@@ -132,12 +132,10 @@ const answer = (event) => {
         statusText.innerText = `¡Correcto!
         ${name} ha atacado a ${nameM}. Vida actual de ${nameM}: ${vidaRestanteMonstruo1 - traveler.heroeDanio1}`
         vidaRestanteMonstruo1 = vidaRestanteMonstruo1 - traveler.heroeDanio1
-        currentRight++
     } else {
         statusText.innerText = `¡Incorrecto!
         ${nameM} ha atacado al viajero. Vida actual de ${name}: ${vidaRestanteHeroe1 - monstruo1.monstruo1Danio}`
         vidaRestanteHeroe1 = vidaRestanteHeroe1 - monstruo1.monstruo1Danio
-        currentWrong++
     }
     currentQuestion++
     questionText.innerText = acertijos[currentQuestion].pregunta

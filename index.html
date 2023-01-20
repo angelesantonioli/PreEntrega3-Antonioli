@@ -8,12 +8,13 @@
     <title>RPG - Intra Abyssus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Redacted+Script&family=Rubik+Glitch&family=VT323&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redacted+Script&family=Rubik+Glitch&family=VT323&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
 </head>
 
 <body class="body">
@@ -21,8 +22,8 @@
         <input type="button" value="¿Crear nuevo usuario?" id="boton-new-user" class="boton" style="display: none;">
     </label>
     <div class="bienvenida" id="welcome">
-        <h2>I n t r A  A b y s u s S</h2>
-        <p>Por favor ingrese el nombre con el que desea ser llamado durante el juego. Tiene hasta 12 caracteres.</p>
+        <h2>I n t r A A b y s u s S</h2>
+        <p>Por favor ingrese el nombre con el que desea ser llamado durante el juego. Tiene hasta 10 caracteres.</p>
         <form id="login">
             <label>
                 <input type="text" placeholder="Nombre" id="name" class="textbox">
@@ -41,10 +42,10 @@
         </form>
     </div>
     <div class="fondo">
-        <img src="img/index.jpg" alt="fondo index" >
+        <img src="img/index.jpg" alt="fondo index">
     </div>
     <div class="portada">
-    <h1>I n t r A  A b y s u s S</h1>
+        <h1>I n t r A A b y s u s S</h1>
     </div>
     <div class="music-icon">
         <img src="img/play.png" alt="music icon" width="100" id="musicIcon">
@@ -52,12 +53,20 @@
     <audio loop id="intro">
         <source src="music/Intro.mp3" type="audio/mp3">
     </audio>
-    <div class="cero-chapter" id="cero">
-        <a href="pages/sati/virià-sati.html"><img src="img/monster card1.jpg" alt="monstruo1" id="satiIcon" ></a>
-        <h2 class="glitch"> <span aria-hidden="true">Virià Sati</span>V̸͈͈͓̊̀i̵̲̟̬̣͛̃͘r̶̤̲̓̓̈̇̃i̴̺̺̱̇ą̴̣͈̻̀̌ ̸̢̹̒̈́S̴̫̟͚̰̿͒̎̏a̷̦̝̣͒̏̚t̸̜̦̆̎ͅi̴̡̬̤̥̋̄͐<span aria-hidden="true">Virià Sati</span> </h2>
-    </div>
-    <div class="uno-chapter" id="uno" style="display: none;">
-        <p>oa</p>
+    <div class="cards">
+        <div class="cero-chapter" id="cero">
+            <a href="pages/sati/virià-sati.html"><img src="img/monster card1.jpg" alt="monstruo1" id="satiIcon"></a>
+            <h2 class="glitch"> <span aria-hidden="true">Virià Sati</span>V̸͈͈͓̊̀i̵̲̟̬̣͛̃͘r̶̤̲̓̓̈̇̃i̴̺̺̱̇ą̴̣͈̻̀̌
+                ̸̢̹̒̈́S̴̫̟͚̰̿͒̎̏a̷̦̝̣͒̏̚t̸̜̦̆̎ͅi̴̡̬̤̥̋̄͐<span aria-hidden="true">Virià Sati</span> </h2>
+        </div>
+
+        <div class="dos-chapter" id="dos" style="display: none;">
+            <a href="pages/viri/saddha-viriya.html"><img src="img/monster2 card .png" alt="monstruo2" id="ViriIcon"></a>
+            <h2 id="glitch2" class="glitch"> <span aria-hidden="true">Saddha
+                    Viriya</span>S̵̮͎̖̎̈́͆a̵̡͎̒͋ͅͅd̵̖͈̺͌͘d̸͇̔̋͘h̸̙̼̀͠a̶͖̖̿
+                ̵̩͚̱̜̋͑̿V̶̛̻̰̺̠͂̄̎ï̵͂̀ͅͅṙ̵̪͇̲̄̔͝ǐ̶̥̹̪̃̈́͠ÿ̴̻́̀ą̶̳̩͐͘<span aria-hidden="true">Saddha Viriya</span>
+            </h2>
+        </div>
     </div>
 
     <script src="helper.js"></script>
